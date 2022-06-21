@@ -1,0 +1,91 @@
+{%extends 'partials/base.html'%}
+{% load static%}
+{% load crispy_forms_tags %}
+{% block link%} <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"> {%endblock%}
+{%block title%}Urban Admin{%endblock%}
+{% block content%}
+
+<div class="main-admin">
+    <div class="admin-sidebar">
+        <div class="welcome"><center><h2 style="padding: 10px;">Welcome miss Urban.Click the dropdown for uploads. This is your admin</h2> </center> <hr></div> 
+
+        <div class="admin-siderow">
+      
+            <div class="admin-content" id="pp">
+                <ul class="sidebar-links"> 
+                    <li><a href="">Upload Product</a></li>
+                    <li><a href="">View orders</a></li>
+                    <li><a href="">Upload Videos</a></li>
+                    <li><a href="">Post a Blog</a></li>
+
+                </ul>
+            </div>
+            <div class="admin-sidebar-content">
+                {% if p == 'hello'%}
+                <div class="database-summary-row">
+                    <div class="database-content">
+                        <div class="content-title">
+                            <h1 style="color: #000000;">Products</h1>
+                        </div>
+                        <div class="content-body">
+                            <span class="badge badge-warning" style="font-size: 20px">Total: {{products|length}}</span>
+                        </div>
+                    </div>
+                    <div class="database-content">
+                        <div class="content-title">
+                            <h1 style="color: #000000;">Videos</h1>
+                        </div>
+                        <div class="content-body">
+                             <span class="badge badge-warning" style="font-size: 20px">Total:{{videos|length}}</span>
+                            <!-- <p>Total:{{videos|length}}</p> -->
+                        </div>
+                    </div>
+                    <div class="database-content">
+                        <div class="content-title">
+                            <h5>title</h5>
+                        </div>
+                        <div class="content-body">
+                            <p>count</p>
+                        </div>
+                    </div>
+                    <div class="database-content">
+                        <div class="content-title">
+                            <h5>title</h5>
+                        </div>
+                        <div class="content-body">
+                            <p>count</p>
+                        </div>
+                    </div>
+                </div>
+                {%elif page == 'video'%}
+                    <div class="video-container" >
+                        <div class="video-form" >
+                           <form id="video-form_id" method="POst" enctype="multipart/form-data">
+                               {% csrf_token%}
+                               {{form.media}}
+                               <div class="form-field">{{form}}</div>
+                               <div class="submit-btn" style="text-align: center;">
+                                   <input type="submit">
+                               </div>
+                           </form>
+                        </div>
+                    </div>
+                {%elif p == 'message'%}
+                    <div class="admin-product-form">
+                        <form method="post" enctype="multipart/form-data">
+
+                            {% csrf_token%}
+                            {{form|crispy}}
+                            <input type="submit" id="pdt-btn">
+                            
+                        </form>
+                    </div>
+                {%endif%}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock%}

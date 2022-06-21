@@ -1,0 +1,97 @@
+ {% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    
+    <title>{%block title%}{%endblock%}</title>
+    {% block link%} {%endblock%}
+</head>
+<body>
+    <header>
+       <nav class="nav-bar">
+            <div class="nav-logo"><h1><a href="/" style="color: white; text-decoration:none;">Urban <span class="confectionary"> <i class="ri-cake-fill"></i></span></a></h3></div>
+            <div>
+                <i class="ri-menu-line" id="navOpen">0</i>
+                <i class="ri-close-line" id="navClose">c</i>
+            </div>
+            <!-- <div class="nav-links"> -->
+                <ul class="nav-links-holder">
+                    <li><a href="/"><span class="home">HOME</span></a></li>
+                    <li><a href="{% url 'about-us'%}">ABOUT</a></li>
+                    <li><a href="{% url 'gallery'%}">Gallery</a></li>
+                    <li><a href="{% url 'videos'%}">Videos</a></li>
+
+                    <li><a href="{% url 'contact-us'%}">CONTACT US</a></li>
+                    <li><a href=""><i class="ri-shopping-cart-2-line"></i></a></li>
+                    <li><a href="{% url 'our-catalog'%}">Catalog</a></li>
+                    {% if page == 'video'  or p == 'hello'%}
+                    <li class="ad"><a href="{% url 'post-product'%}">Upload product</a></li>
+                    <li class="ad"><a href="{% url 'post-video'%}">Upload video</a></li>
+                    <li class="ad"><a href="">Blog</a></li>
+                    {%endif%}
+                </ul>
+            <!-- </div> -->
+        </nav>
+    </header>
+     {% if messages %} 
+        <ul class="messages" id="success-msg"> 
+            {% for message in messages %} 
+            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+
+                <div class="alert alert-success alert-dismissible fade show" role="alert"  id="close_btn">
+                  <strong >{{ message }}</strong> 
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true" id="close-btn" >&times;</span>
+                  </button>
+                </div>
+                <!-- <div class="success-msg" style="color: #155724;background-color: #d4edda; border-color: #c3e6cb; display:grid; grid-template-columns: repeat(2, 1fr); justify-content: space-between;">
+                    <p style="display: inline;"><strong>{{ message }}</strong></p>
+                    <button class="close-btn" style="border: none; align-self: flex-end;"> <i class="ri-close-line"></i></button>
+                </div> -->
+            </li> 
+            {% endfor %} 
+        </ul> 
+    {% endif %}
+
+    {% block content%}
+    {% endblock %}
+
+     <!-- footer  -->
+     <div class="footer-container">
+        <div class="row">
+            <div class="f-content">
+                <div class="fheadng"><h3>Reach us at..</h3></div>
+                <div class="fbody">
+                    <p>Location: and only plug for cakes</p>
+                    <p><i class="ri-whatsapp-line"></i> <span> 09090927742</span></p>
+                    <p><i class="ri-facebook-circle-line"></i><span> urbanconfectionaryng</span></p>
+                    <p><i class="ri-instagram-line"></i> <span> urbanconfectionaryng</span></p>
+                </div>
+            </div>
+            <div class="f-content" id="flogo">
+             <div class="fheadng"><h3>Urban Confectionary</h3></div>
+             <div class="fbody">
+                 <p>Nothing beats the effect of our cake<br> cream on your brain nerves.<br> We got you being your best.<br>
+                     Urban Confectionary remains<br> your one and only plug for cakes<br> and pasteries of all kinds and types<br> in Lagos and South East.</p>
+             </div>
+         </div>
+          <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1171084.2401368008!2d2.571041373479435!3d6.3732223552110545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1654112325490!5m2!1sen!2sng" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+             </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/main.js'%}"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+{%extends 'partials/base.html'%}
+{% load static%}
+{% load crispy_forms_tags %}
+{%block title%}Contact Us{%endblock%}
+{% block content%}
+    <!-- contact page content starts here --> 
+    <div class="container">
+        <div class="contact-heading"><h2 class="contact-heading" style="color: #000; text-align:center;">Contact us</h2></div>
+        <div class="container">
+           <!--      <form action="" method="POST">
+                    {%csrf_token%}
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="fname">First name</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="fname" name="fname">
+                        </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-25">
+                                <label for="lname">Last Name</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="lname" name="latname" placeholder="Your last name ..">
+                            </div>
+                    </div>
+                     <div class="row">
+                            <div class="col-25">
+                                <label for="lname">Email</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="email" id="lname" name="email" placeholder="Your Email ..">
+                            </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-25">
+                                <label for="lname">Meassage</label>
+                            </div>
+                            <div class="col-75">
+                                <textarea name="Message" id="subject" style="height:200px ;" placeholder="Write something"></textarea>
+                            </div>
+                    </div>
+                    <div class="row">
+                            <input type="submit" value="submit">
+                    </div>
+                </form> -->
+                <form method="POST">
+                    {%csrf_token%}
+                    <p>{{form|crispy}}
+                    <input type="submit">
+                </form>
+        </div>
+    </div>
+    <!-- footer  -->
+   {% endblock%}

@@ -1,0 +1,19 @@
+{%extends 'partials/base.html'%}
+{% load static%}
+{% load crispy_forms_tags %}
+{%block title%}New Product{%endblock%}
+{% block link%} <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+{%endblock%}
+{% block content%}
+<div class="admin-product-form">
+    <form method="POST" enctype="=multipart/form-data">
+        {{form.media}}
+        {% csrf_token%}
+        {{form.title|as_crispy_field}}
+        {{form.price|as_crispy_field}}
+        {{form.img|as_crispy_field}}
+        {{form.category|as_crispy_field}}
+        <input type="submit" value="Upload">
+    </form>
+</div>
+{% endblock %}
