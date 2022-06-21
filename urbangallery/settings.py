@@ -9,7 +9,9 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+# SECURITY WARNING: keep the secret key used in production secret!
+from .secret import *
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -19,14 +21,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ydxuy&-w)z^zm&2jg%i5@bg9deya-qd_9xxcn%s-r+8(v-f*qx'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG=True
+
 EMAIL_HOST ='smtp.zoho.com'
 EMAIL_HOST_USER ='nwafor6@zohomail.com'
-EMAIL_HOST_PASSWORD='Nwafor6.com'
+EMAIL_HOST_PASSWORD='password'
 EMAIL_PORT =587
 EMAIL_USE_TLS =True
 EMAIL_BACKEND= 'django.core.mail.backends.smpt.EmailBackend'
