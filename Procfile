@@ -1,1 +1,1 @@
-web:gunicorn urbangallery.wsgi
+web: gunicorn urbangallery.wsgi
