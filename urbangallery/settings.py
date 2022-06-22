@@ -35,7 +35,7 @@ EMAIL_USE_TLS =True
 EMAIL_BACKEND= 'django.core.mail.backends.smpt.EmailBackend'
 
 
-ALLOWED_HOSTS = ['localhost',  '127.0.0.1',]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -138,7 +138,7 @@ MEDIA_URL= '/media/'
 MEDIA_ROOT= BASE_DIR /'media/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-django_heroku.setings(locals())
+django_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
