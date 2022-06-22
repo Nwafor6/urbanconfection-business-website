@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 # SECURITY WARNING: keep the secret key used in production secret!
 import django_heroku
-from .secret import *
+
 import os
 from pathlib import Path
 
@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 
-
+SECRET_KEY='django-insecure-ydxuy&-w)z^zm&2jg%i5@bg9deya-qd_9xxcn%s-r+8(v-f*qx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG=True
 
