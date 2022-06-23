@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY='django-insecure-ydxuy&-w)z^zm&2jg%i5@bg9deya-qd_9xxcn%s-r+8(v-f*qx'
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG=False
+DEBUG=True
 
 EMAIL_HOST ='smtp.zoho.com'
 EMAIL_HOST_USER ='nwafor6@zohomail.com'
@@ -35,7 +35,7 @@ EMAIL_USE_TLS =True
 EMAIL_BACKEND= 'django.core.mail.backends.smpt.EmailBackend'
 
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
