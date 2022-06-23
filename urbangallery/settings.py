@@ -35,7 +35,7 @@ EMAIL_USE_TLS =True
 EMAIL_BACKEND= 'django.core.mail.backends.smpt.EmailBackend'
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['urbanstores.herokuapp.com']
 
 
 # Application definition
