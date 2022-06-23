@@ -25,7 +25,12 @@
                     <div class="pdt-price"><h4>#{{item.price}}</h4></div>
                     <div class="pdt-price" style="margin-bottom: 10px"><h4>{{item.category}}</h4></div>
                 </div>
-                {%endfor%}
+                {%empty%}
+                    <div class="alert alert-info" role="alert">
+                      Catalog is uplaoded!
+                    </div>
+                {% endfor %}
+
             </div>
         </div>
     </div>
