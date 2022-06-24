@@ -214,11 +214,11 @@ header{
 
 /* main section */
 .main{
-    padding:1em 3em 0 3em;
+    padding: 20px;
     background-image: /*linear-gradient(rgba(4, 9, 30, 0.3),rgba(4, 9, 30, 0.1)),*/ url("images/bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    color: #000000;
+    /*color: #000000;*/
     
 }
 
@@ -325,7 +325,7 @@ header{
 
 /* Our product section */
 .our-products{
-    /* padding-top: 1em; */
+   margin-top: 2em;
     text-align: center;
 }
 .our-products h2{
@@ -338,6 +338,12 @@ header{
     flex-flow: row wrap;
     justify-content: space-around;
     /* padding-right: 30px; */
+
+}
+.our-products .product-row{
+   display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
 
 }
 .product-container{
@@ -472,6 +478,14 @@ input[type=submit]:hover{
     flex-flow:row wrap;
     font-size: 15px;
    
+}
+.our-products .product-row{
+    /* padding-top: 1em; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    /* padding-right: 30px; */
+
 }
 }
 
