@@ -7,17 +7,15 @@
 
 <div class="main-admin">
     <div class="admin-sidebar">
-        <div class="welcome"><center><h2 style="padding: 10px;color: white;">Welcome miss Urban.Click the dropdown for uploads. This is your admin</h2> </center> <hr></div> 
+        <div class="welcome"><center><h2 style="padding: 10px;">Welcome miss Urban.Use desktop mode for uploads. This is your admin</h2> </center> <hr></div> 
 
         <div class="admin-siderow">
       
             <div class="admin-content" id="pp">
                 <ul class="sidebar-links"> 
-                    <li><a href="">Upload Product</a></li>
-                    <li><a href="">View orders</a></li>
-                    <li><a href="">Upload Videos</a></li>
-                    <li><a href="">Post a Blog</a></li>
-
+                    <li class="ad"><a href="{% url 'post-product'%}">UPLOAD PRODUCT</a></li>
+                    <li class="ad"><a href="{% url 'post-video'%}">UPLOAD VIDEO</a></li>
+                    <li class="ad"><a href="">BLOG</a></li>
                 </ul>
             </div>
             <div class="admin-sidebar-content">

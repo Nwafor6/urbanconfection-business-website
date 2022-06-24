@@ -181,6 +181,7 @@ header{
 /* .baker-img{
     width: 40%;
 } */
+
 .slider img{
     width: 100%;
 }
@@ -740,22 +741,18 @@ video{
 
 /*admin.Html styles*/
 .main-admin{
-    background-color: #2f2519;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 .admin-sidebar{
 
     font-size: 10px;
-    padding: 2em;
+    padding: 20px;
     /* width: 20px; */
 }
 .admin-siderow{
-        /*display: flex;*/
-        /*flex-flow: wrap;*/
         display: grid;
-        grid-template-columns: 1fr 4fr ;
-        /* background-color: red; */
+        grid-template-columns: 2fr 4fr ;
 
 }
 
@@ -776,7 +773,9 @@ video{
 .sidebar-links a{
     text-decoration: none;
     /* font-weight: bold; */
-    color: white;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
 
 }
 .database-summary-row{
@@ -790,9 +789,7 @@ video{
     height: 100%;
 }
 .database-content{
-    background-image: url("https://cdn.wallpapersafari.com/20/21/pDAEka.jpg");
-    background-size: cover;
-    background-position: relative;
+   box-shadow: 7px 7px 5px rgba(222, 206, 255, 0.3);
     width: 100%;
     padding: 10px;
   
