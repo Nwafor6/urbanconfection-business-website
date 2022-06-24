@@ -63,7 +63,7 @@ def ContactUs(request):
             }
             message= "\n".join(body.values())
             try:
-                send_mail(subject, message,settings.EMAIL_HOST_USER, ['nwafor6@zohomail.com'], fail_sliently=False)
+                send_mail(subject, message,settings.EMAIL_HOST_USER, ['nwaforglory6@gmail.com'], fail_silently=False)
             except:
                 return HttpResponse('Invalid header found.')
         return redirect ('contact-us')
