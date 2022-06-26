@@ -192,10 +192,14 @@ header{
         display: flex;
         flex-flow: column;
     }
+    .slider .welcome-text{
+    margin-left: 0;
+}
 
     .slider .welcome-note{
     width: 100%;
 }
+
 
 
     .slider img{
@@ -476,13 +480,16 @@ input[type=submit]:hover{
 .ficons{
     display: flex;
     flex-flow: row wrap;
-    /*justify-content: space-around;*/
+    justify-content: center;
+    align-items: center;
     grid-gap: 10px;
-    font-size: 20px;
+    font-size: 15px;
+
 }
 .ficons li{
     display: inline-block;
     list-style: none;
+    padding: 5px;
 }
 .ficons li a{
     text-decoration: none;
