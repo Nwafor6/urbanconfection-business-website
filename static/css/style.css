@@ -155,20 +155,23 @@ header{
 
 .slider .welcome-note{
     padding: 50px 0;
-    /*width: 70%;*/
+    width: 70%;
     text-align: center;
     font-size: 15px;
     line-height: 30px; 
     
 }
+.slider .welcome-text{
+    margin-left: 15px;
+}
 
 .slider .welcome-note .order-button a{
-    color: #fffffc;
+     color: white;
     text-decoration: none;
-    background-color:rgb(255, 149, 0);
-    padding: 10px;
-    width: 100px;
-    line-height: 30px;
+    font-weight: bold;
+    background-color: #EA6060;
+    font-size: 10px;
+    padding: 5px;
     transition: 1s all;
     position: relative;
 }
@@ -177,10 +180,6 @@ header{
     background-color: #fa7d09;
 }
 
-
-/* .baker-img{
-    width: 40%;
-} */
 
 .slider img{
     width: 100%;
@@ -193,6 +192,12 @@ header{
         display: flex;
         flex-flow: column;
     }
+
+    .slider .welcome-note{
+    width: 100%;
+}
+
+
     .slider img{
     width: 80%;
     }
@@ -267,6 +272,9 @@ header{
 .main .we-are-urban .urban-text .text-body{
     font-size: 0.8em;
        /* padding-right: 4em;    */
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
 }
 
 /*.urban-text {
@@ -277,19 +285,24 @@ header{
 
   
 .main .we-are-urban .urban-text .text-body{
-    font-size: 0.7rem;}
+    font-size: 0.7rem;
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+    }
+
 }
 .read-more{
-    background-color: #fa7d09;
-    color: #fffffc;
-    /* width: 5rem; */
-    padding: 2px;
+
     margin: 10px 0 10px 0;
 }
 .read-more a{
     color: white;
     text-decoration: none;
     font-weight: bold;
+    background-color: #EA6060;
+    font-size: 10px;
+    padding: 5px;
 }
 
 .we-are-urban .we-are-urban-image{
@@ -407,7 +420,7 @@ label{
 }
 
 input[type=submit]{
-    background-color: #ff7b00;
+    background-color: #EA6060;
     color: #ffff;
     padding: 12px 20px;
     border: none;
@@ -455,15 +468,38 @@ input[type=submit]:hover{
     justify-content: space-between;
     line-height: 30px;
     grid-gap: 15px;
-    align-items: center;
+    /*align-items: center;*/
+
 
 
 }
-.flink {
+.ficons{
+    display: flex;
+    flex-flow: row wrap;
+    /*justify-content: space-around;*/
+    grid-gap: 10px;
+    font-size: 20px;
+}
+.ficons li{
+    display: inline-block;
+    list-style: none;
+}
+.ficons li a{
     text-decoration: none;
-    color: white;
-    padding: 2px;
 }
+.ficons li a:hover{
+    font-size: 30px;
+}
+.w-link {
+   color:#25D366 ;
+}
+.f-link{
+    color: white;
+}
+.i-link{
+    color: #F58529;
+}
+
 /*.footer-container .row{
     display: flex;
     flex-flow:row wrap;
@@ -671,13 +707,10 @@ video{
 
 }
 .video-form input[type=submit]{
-    width: 300px;
     display: block;
     margin-top: 10px;
     width: 100px;
-    margin-right: auto;
-    margin-left: auto;
-   /* padding: 1px;*/
+ 
 
 }
 .video-form label{
