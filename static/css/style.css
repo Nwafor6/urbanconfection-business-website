@@ -463,9 +463,11 @@ input[type=submit]:hover{
 } 
 
 .footer-container{
-    background-color: #2f2519;
+   display: flex;
+    flex-flow: column;
+    align-items: center;
     padding: 2em;
-    /*padding-left: 4em;*/
+   height: 190px;
     color: white;
     text-align: justify;
     background-color: #712D72;
@@ -514,14 +516,21 @@ input[type=submit]:hover{
     color: #F58529;
 }
 
-/*.footer-container .row{
-    display: flex;
-    flex-flow:row wrap;
-    justify-content: space-between;
-    font-size: 13px;
-    line-height: 30px;
+.dev-info{
+    display: inline;
+    position: relative;
+    top: 70px;
 
-}*/
+}
+.top{
+    align-self: flex-end;
+    position: relative;
+    top: 50px;
+    text-decoration:none;
+    font-size: 13px; 
+    color: white; 
+    float: right;
+}
 
 @media(max-width:768px){
     .footer-container .row{
@@ -556,8 +565,10 @@ input[type=submit]:hover{
 }
 
 .about-image img{
-    width: 100%;
+    width: 75%;
     border-radius: 100%;
+    outline: 2px solid #EA6060;
+    padding: 5px;
     
 }
 .about-body-text{
@@ -892,6 +903,9 @@ video{
 }
 
     
-
-
+/*.w-100 {
+    width: 100%!important;
+    height: 70vh;
+}
+*/
 /*end of admin.html style*/
