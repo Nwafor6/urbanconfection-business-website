@@ -15,6 +15,7 @@ html, body{
     overflow-x: hidden;
     width: 100%;
     position: relative;
+    scroll-behavior: smooth;
 
 
     
@@ -170,7 +171,7 @@ header{
     text-decoration: none;
     font-weight: bold;
     background-color: #EA6060;
-    font-size: 10px;
+    font-size: 15px;
     padding: 5px;
     transition: 1s all;
     position: relative;
@@ -305,8 +306,13 @@ header{
     text-decoration: none;
     font-weight: bold;
     background-color: #EA6060;
-    font-size: 10px;
+    font-size: 15px;
     padding: 5px;
+    transition: 1s all;
+   
+}
+.read-more a:hover{
+     background-color: #fa7d09;
 }
 
 .we-are-urban .we-are-urban-image{
@@ -393,6 +399,7 @@ header{
 .product-price{
     text-align: center;
     color: hotpink;
+    font-size: 17px;
     font-weight: bold;
     transition: 1s all;
     padding: 9px;
@@ -483,7 +490,7 @@ input[type=submit]:hover{
     justify-content: center;
     align-items: center;
     grid-gap: 10px;
-    font-size: 15px;
+    font-size: 25px;
 
 }
 .ficons li{
