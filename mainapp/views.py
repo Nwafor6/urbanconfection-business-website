@@ -77,8 +77,7 @@ class ProductFormView(LoginRequiredMixin, CreateView):
     template_name ='mainapp/admin.html'
     success_url = '/dashboard/'
     success_message = "Product added sucessfully Miss Urban !!!. you've been redirected to your dashboard"
-
-
+    
 
     def get_context_data(self, *args,**kwargs):
         context=super().get_context_data(**kwargs)
@@ -98,6 +97,7 @@ class ProductFormView(LoginRequiredMixin, CreateView):
 
 @login_required
 def CreateVideo(request):
+
     page ='video'
     if request.method == 'POST':
         form=ProductVideoForm(request.POST, request.FILES)

@@ -143,6 +143,7 @@ header{
 
 .order-button{
     padding: 11px 0 0 0;
+    margin-top: 10px;
 }
 @media(max-width:758px){
 
@@ -171,7 +172,7 @@ header{
     text-decoration: none;
     font-weight: bold;
     background-color: #EA6060;
-    font-size: 15px;
+    font-size: 18px;
     padding: 5px;
     transition: 1s all;
     position: relative;
@@ -298,14 +299,14 @@ header{
 }
 .read-more{
 
-    margin: 10px 0 10px 0;
+    margin: 20px 0 10px 0;
 }
 .read-more a{
     color: white;
     text-decoration: none;
     font-weight: bold;
     background-color: #EA6060;
-    font-size: 15px;
+    font-size: 18px;
     padding: 5px;
     transition: 1s all;
    
@@ -466,7 +467,7 @@ input[type=submit]:hover{
     flex-flow: column;
     align-items: center;
     padding: 2em;
-   height: 240px;
+    height: 309px;
     color: white;
     text-align: justify;
     background-color: #712D72;
@@ -538,6 +539,9 @@ input[type=submit]:hover{
 }
 
 @media(max-width:768px){
+    .footer-container{
+        height: 240px;
+    }
     .footer-container .row{
     display: flex;
     flex-flow:row wrap;
