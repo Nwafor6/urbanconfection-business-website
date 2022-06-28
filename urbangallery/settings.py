@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 # SECURITY WARNING: keep the secret key used in production secret!
 import django_heroku
 
-import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY='django-insecure-ydxuy&-w)z^zm&2jg%i5@bg9deya-qd_9xxcn%s-r+8(v-f*qx'
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG=True
+DEBUG=False
 
 EMAIL_HOST ='smtp.zoho.com'
 EMAIL_HOST_USER ='nwafor6@zohomail.com'
@@ -33,9 +32,10 @@ EMAIL_HOST_PASSWORD='password'
 EMAIL_PORT =587
 EMAIL_USE_TLS =True
 EMAIL_BACKEND= 'django.core.mail.backends.smtp.EmailBackend'
+ADMINS = [('Glory', 'nwafor6@gmail.com'),]
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["urbanstores.herokuapp.com", "localhost",'127.0.0.1']
 
 
 # Application definition
@@ -134,6 +134,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=[
     BASE_DIR/'static'
 ]
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+# WHITENOISE_MANIFEST_STRICT = False
 MEDIA_URL= '/media/'
 MEDIA_ROOT= BASE_DIR /'media/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

@@ -226,7 +226,6 @@ header{
 /* main section */
 .main{
     padding: 20px;
-    background-image: /*linear-gradient(rgba(4, 9, 30, 0.3),rgba(4, 9, 30, 0.1)),*/ url("images/bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     /*color: #000000;*/
