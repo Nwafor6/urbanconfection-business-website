@@ -28,7 +28,7 @@ p{
 
 h1,h2,h3,h4,h4,h6 {
     font-family: 'Merriweather', serif;
-    font-size: 18px;
+    font-size: 28px;
     
   }
 
@@ -467,7 +467,7 @@ input[type=submit]:hover{
     flex-flow: column;
     align-items: center;
     padding: 2em;
-   height: 190px;
+   height: 240px;
     color: white;
     text-align: justify;
     background-color: #712D72;
@@ -485,6 +485,10 @@ input[type=submit]:hover{
 
 
 
+}
+.fheadng{
+    text-align:center;
+    font-size: 23px;
 }
 .ficons{
     display: flex;
@@ -520,6 +524,8 @@ input[type=submit]:hover{
     display: inline;
     position: relative;
     top: 70px;
+    text-align: center;
+    font-size: 19px;
 
 }
 .top{
@@ -538,15 +544,24 @@ input[type=submit]:hover{
     flex-flow:row wrap;
     font-size: 15px;
    
-}
-.our-products .product-row{
-    /* padding-top: 1em; */
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    /* padding-right: 30px; */
+    }
+    .our-products .product-row{
+        /* padding-top: 1em; */
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        /* padding-right: 30px; */
 
-}
+    }
+    .dev-info{
+        font-size: 13px;
+    }
+    .fheadng{
+        font-size: 13px;
+    }
+    .top{
+        top: 90px;
+    }
 }
 
 
@@ -574,6 +589,7 @@ input[type=submit]:hover{
 .about-body-text{
     line-height: 3em;
 }
+
 @media(max-width:700px){
     .about-content{
         display: flex;
